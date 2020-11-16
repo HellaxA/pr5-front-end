@@ -1,0 +1,29 @@
+<div class="container">
+  <form [formGroup]="articleFormGroup" (ngSubmit)="onSubmit()">
+    <div class="row mt-3">
+      <div class="col-md-2"></div>
+      <div class="col-md-9">
+        <div class="input-space">
+          <label for="article" class="h3">Article:
+            <input class="col-12" formControlName="article" type="text" id="article">
+          </label>
+        </div>
+        <input type="submit" value="Add Article" class="btn btn-info">
+        <br><br>
+      </div>
+    </div>
+  </form>
+</div>
+<hr>
+<div class="container">
+  <form [formGroup]="articleFormGroup" (ngSubmit)="onSubmit()">
+    <div class="row mt-3">
+      <ul>
+        <li *ngFor="let article of articles">{{article.text}}
+        </li>
+      </ul>
+    </div>
+  </form>
+</div>
+
+
